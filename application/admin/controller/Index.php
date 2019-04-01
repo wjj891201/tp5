@@ -8,8 +8,11 @@ class Index extends Controller
 {
     public function index()
     {
-        echo 121212121212;
-        exit;
         return $this->fetch();
+    }
+
+    public function welcome()
+    {
+        return "欢迎来到o2o主后台首页!";
     }
 }
