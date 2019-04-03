@@ -9,7 +9,7 @@
 namespace app\common\model;
 
 
-class User extends BaseModel
+class Member extends BaseModel
 {
     public function updateById($data, $id)
     {

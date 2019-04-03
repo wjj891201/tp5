@@ -32,7 +32,7 @@ class Base extends Controller
     {
         if (!$this->account)
         {
-            $this->account = session('user', '', 'admin');
+            $this->account = session('member', '', 'admin');
         }
         return $this->account;
     }
