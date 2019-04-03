@@ -1,6 +1,6 @@
 <?php
 
-namespace app\api\controller;
+namespace app\admin\controller;
 
 use think\Controller;
 use think\Request;
@@ -15,8 +15,8 @@ class Image extends Controller
         $info = $file->move('upload');
         if ($info && $info->getPathname())
         {
-            return show(1, 'success', '/' . $info->getPathname());
+            return json_encode(['status' => intval(1), 'message' => 'success', 'data' => '/' . $info->getPathname()]);
         }
-        return show(0, 'upload error');
+        return json_encode(['status' => intval(0), 'message' => 'upload error', 'data' => []]);
     }
 }
